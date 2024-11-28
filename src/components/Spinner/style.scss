@@ -1,0 +1,45 @@
+.spinner {
+  position: relative;
+  display: inline-flex;
+  width: 36px;
+  padding: 2px;
+  height: 36px;
+  align-items: center;
+  color: inherit;
+  &::after {
+    content: '';
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    animation: spinner .6s linear infinite;
+    border-top: 4px solid currentColor;
+    border-left: 4px solid currentColor;
+    border-bottom: 4px solid currentColor;
+    border-right: 4px solid rgba(255, 255, 255, 0.0);
+  }
+
+  &.sm {
+    width: 24px;
+    height: 24px;
+    border-width: 2px;
+
+    &::after {
+      border-width: 3px;
+    }
+  }
+
+  &.lg {
+    width: 46px;
+    height: 46px;
+  }
+
+  &.xl {
+    width: 56px;
+    height: 56px;
+  }  
+}
+
+@keyframes spinner {
+  to { transform: rotate(360deg); }
+}

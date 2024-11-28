@@ -1,0 +1,56 @@
+.stepper {
+  header {
+    margin-bottom: 56px;
+
+    ol {
+      width: 100%;
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: space-between;
+    
+      li {
+        cursor: default;
+        min-width: 36px;
+        min-height: 36px;        
+        max-width: 36px;
+        max-height: 36px;        
+        display: flex;
+        border-radius: 100%;
+        border: solid 2px #222;
+        background-color: #fff;
+        margin-bottom: 2px;
+        font-weight: 600;
+        align-items: center;
+        justify-content: center;
+
+        &[data-active=true] {
+          background-color: #222;
+          color: #fff;
+
+          > span {
+            border: solid 2px #fff;
+            height: 30px;
+            width: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100%;
+          }
+        }
+      }
+
+      &::before {
+        content: "";
+        top: 50%;
+        transform: translateY(-50%);
+        left: 5px;
+        width: calc(100% - 10px);
+        height: 3px;
+        z-index: -1;
+        background-color: #222;
+        position: absolute;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.user-profile-edit-wrapper {
+  overflow: auto;
+  max-height: 85vh;
+  padding-top: 32px !important;
+
+  .user-profile-edit {
+    &__information {
+      form {
+        .fields > .field:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

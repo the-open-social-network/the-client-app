@@ -1,0 +1,17 @@
+html, body {
+	font-family: Work Sans;
+}
+
+$fonts: (
+  "font-family-1": "Work Sans",
+  "font-family-2": "Merriweather",
+);
+  
+:root {
+  @each $name, $value in $fonts {
+		--#{$name}: #{$value};
+		.#{$name} {
+			font-family: var(--#{$name});
+		}
+	}
+}

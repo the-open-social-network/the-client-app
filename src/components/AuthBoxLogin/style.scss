@@ -1,0 +1,23 @@
+.auth-box-login {
+  display: block;
+  margin: 0;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 100px;
+
+  a {
+    text-align: center;
+    width: 100%;
+    line-height: 100%;
+    display: block;
+    margin: 24px 0;
+  }
+
+  h1 {
+    margin-bottom: 32px;
+  }
+
+  hr {
+    margin: 24px 0;
+  }
+}

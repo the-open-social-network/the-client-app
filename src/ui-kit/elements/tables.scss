@@ -1,0 +1,23 @@
+table {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 24px;
+  color: #000;
+  thead {
+    font-size: 1.1em;
+    font-weight: 600;
+  }
+  th, td {
+    padding: 16px;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-color: #E0E0E0;
+  }
+  td {
+    font-size: 1em;
+  }
+  @media screen and (max-width: 980px) {
+    display: block;
+    overflow: auto;
+  }
+}

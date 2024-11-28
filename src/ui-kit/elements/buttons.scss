@@ -1,0 +1,158 @@
+button, .button,
+[type=button],
+[type=submit],
+[type=reset] {
+  border: none;
+  height: 48px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;  
+  padding: 0 32px;
+  border-radius: 0px;
+  background: none;
+  font-weight: 600;
+  width: auto;
+  white-space: nowrap;
+  border: solid 1px #000;
+  color: #000;
+  gap: 8px;
+  svg {
+    height: 60%;
+    max-height: 24px;
+    fill: #444;
+    outline: none;
+  }
+  .button-icon {
+    &:first-child {
+      margin-right: 6px;
+    }
+    &:last-child {
+      margin-left: 6px;
+    }
+  }
+  &:hover, &:active {
+    filter: contrast(0.8);
+  }
+  &:focus {
+    outline: solid 2px #000;
+  }  
+  input[type=file] {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    appearance: none;
+    border: none;
+    width: auto;
+    overflow: hidden;
+    opacity: 0;
+    cursor: pointer;
+    max-width: 100%;
+  }
+  > span {
+    display: flex;
+    align-items: center;
+    &:not(:last-child) {
+      margin-right: 8px;
+    }    
+  }
+  &.button--blocked {
+    width: 100%;
+    display: flex;
+  }  
+}
+
+.button-primary {
+  color: #fff;
+  border: solid 1px #000;
+  background-color: #000;
+
+  svg {
+    fill: #fff;
+  }
+}
+
+.button-seamless {
+  appearance: none;
+  all: unset;
+  border: none;
+  display: flex;
+  align-items: center;
+  background: none;
+  min-width: 24px;
+  color: inherit;
+  font-size: inherit;
+  height: inherit;
+  font-family: inherit;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(100, 100, 100, .1);
+  }
+}
+
+.button-light {
+  border: solid 1px #f1f1f1;
+  background-color: #f1f1f1;
+  .button-icon {
+    color: #000;
+  }
+}
+
+.button-ghost {
+  border: none;
+  background-color: transparent;
+
+  svg {
+    width: auto;
+    height: auto;
+  }
+
+  &:hover {
+    filter: none;
+    background-color: #f1f1f1;
+  }
+}
+
+.button-brick {
+  min-height: unset;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 0px;
+}
+
+button, .button {
+  &.button-disabled, &[disabled] {
+    opacity: .4;
+    cursor: default;
+  }
+}
+
+.button--danger {
+  color: #fff;
+  background-color: var(--app-color-error);
+  border-color: var(--app-color-error);
+  svg {
+    fill: #fff;
+  }
+}
+
+.button--small {
+  width: auto;
+  height: 24px;
+  min-height: unset;
+
+  svg {
+    height: 80%;
+  }
+}
+
+.button-brick.button--small {
+  width: 24px;
+}

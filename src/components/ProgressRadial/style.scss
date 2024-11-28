@@ -1,0 +1,11 @@
+.progress-radial {
+  width: 40px;
+  user-select: none;
+  cursor: default;
+
+  .track, .fill {
+    stroke-width: 10;
+    fill: rgba(0, 0, 0, 0);
+    transform: rotate(90deg) translate(0px, -80px);
+  }
+}

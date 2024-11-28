@@ -1,0 +1,106 @@
+.user-profile {
+  padding-bottom: 16px;
+  border-bottom: solid 1px #f1f1f1;
+
+  &__background {
+    overflow: hidden;
+    height: 240px;
+    background-color: #ccc;
+  }
+
+  &__information {
+    margin-bottom: 8px;
+    > header {
+      display: flex;
+      padding: 8px 16px;
+      align-items: center;
+      position: relative;
+      justify-content: flex-end;
+      
+      > .avatar {
+        left: 16px;
+        top: -50px;
+        position: absolute;
+
+        img {
+          border: solid 2px #fffefe;
+        }
+      }
+    }
+  }
+
+  &__actions {
+    gap: 8px;
+    display: flex;
+    min-height: 46px;
+  }
+
+  &__identification {
+    padding: 0 16px;
+    margin-bottom: 4px;
+    h2 {
+      margin: 0;
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    p {
+      margin: 0;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    a {
+      padding: 2px;
+      font-weight: 400;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      color: #555;
+
+      svg {
+        height: 16.5px;
+        fill: var(--app-color-accent);
+      }
+    }    
+  }
+
+  &__bio {
+    padding: 0 16px;
+    margin-bottom: 8px;
+
+    p {
+      margin: 0;
+      font-size: 16px;
+    }
+  }
+
+  &__stats {
+    gap: 16px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+
+    a {
+      font-weight: 400;
+    }
+  }
+
+  &__more-holder {
+    position: relative;
+  }
+  
+  &__more-actions {
+    list-style: none;
+    margin: 0;
+
+    li {
+      margin: 0;
+
+      button {
+        width: 100%;
+        padding: 0 24px;
+        justify-content: start;
+      }
+    }
+  }
+}

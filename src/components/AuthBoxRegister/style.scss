@@ -1,0 +1,56 @@
+.auth-box-register {
+  display: block;
+  margin: 0;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+
+  > header {
+    display: flex;
+    margin-bottom: 24px;
+    justify-content: space-between;
+
+    h2 {
+      margin: 0;
+      gap: 8px;
+      display: flex;
+      align-items: center;
+
+      a {
+        display: flex;
+        align-items: center;
+        svg {
+          height: 24px;
+          fill: inherit;
+        }
+      }
+    }
+
+    > div {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__actions {
+    gap: 8px;
+    display: flex;
+  }
+
+  > a {
+    text-align: center;
+    width: 100%;
+    line-height: 100%;
+    display: block;
+    margin: 24px 0;
+  }
+
+  hr {
+    margin: 24px 0;
+  }
+
+  .field[data-input-icon] button.input-icon svg {
+    fill: var(--app-color-error);
+  }
+}

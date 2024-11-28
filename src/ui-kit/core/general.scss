@@ -1,0 +1,31 @@
+:root {
+  --app-color-accent: #007aff;
+  --app-color-error: #e74c3c;
+  --app-color-warn: #ffa500;
+  --app-color-info: #3498db;
+  --app-color-success: #07bc0c;
+}
+
+html, body {
+  color: #444;
+  text-rendering: optimizeSpeed;
+}
+
+::selection {
+  background: #000;
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 16px;
+  &.pd-sm {
+    padding: 0 8px;
+  }
+  &.pd-lg {
+    padding: 0 24px;
+  }
+}

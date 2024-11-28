@@ -1,0 +1,316 @@
+:root {
+  --form-input-height: 48px;
+}
+
+fieldset {
+  padding: 16px;
+  margin-bottom: 24px;
+  border: solid 1px #E0E0E0;
+  border-radius: 0px;
+  legend {
+    padding: 0 10px;
+    color: #000;
+  }
+  .field:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.field {
+  width: 100%;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 24px;
+  label {
+    z-index: 1;
+    position: absolute;
+    top: -9px;
+    left: 12px;
+    padding: 0 6px;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    background-color: #fff;
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+
+    svg {
+      height: 16px;
+      fill: inherit;   
+      display: inline;
+      fill: #888;
+    }
+  }
+  &:focus-within {
+    label:first-child {
+      color: #000;
+    }
+  }
+  &.switch {
+    label {
+      gap: 6px;
+      padding: 0;
+      display: flex;
+      position: static;
+      align-items: center;
+    }
+    &:focus-within {
+      label:first-child {
+        color: #000;
+      }
+    }    
+  }
+  &[data-input-icon] {
+    input {
+      padding-left: var(--form-input-height);
+    }
+    .input-icon {
+      color: #000;
+      height: calc(var(--form-input-height) - 2px);
+      width: calc(var(--form-input-height) - 2px);
+      position: absolute;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      z-index: 0;
+      top: 1px;
+      left: 1px;
+      outline: none;
+
+      svg {
+        fill: #555;
+        height: 50%;
+      }
+    }
+  }
+  &[data-input-icon="right"] {
+    input {
+      padding-left: 16px;
+      padding-right: var(--form-input-height);
+    }
+    .input-icon {
+      top: 1px;
+      right: 1px;
+      left: unset;
+    }
+  }
+}
+
+input, textarea, select {
+  width: 100%;
+  resize: none;
+  height: var(--form-input-height);
+  border: 1px solid #000;
+  box-sizing: border-box;
+  border-radius: 0px;
+  padding: 0 16px;
+  box-sizing: border-box;
+  background: #fff;
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: #000;  
+  &:hover:not(:focus) {
+    border-color: #000;
+  }
+  &:focus {
+    border: none;
+    outline: solid 2px #000;
+  }
+  &[readonly] {
+    border-color: #f1f1f1;
+    background-color: #f1f1f1;
+
+    &:hover, &:active, &:focus {
+      border-color: #f1f1f1;
+      background-color: #f1f1f1;  
+    }
+  }
+}
+
+input[type="color"] {
+  background-color: transparent;
+  padding: 8px;
+}
+	
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 0;
+  appearance: none;
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 0px;
+  cursor: pointer;
+  border: solid 2px #000;
+  &::before {
+    top: 0;
+    left: 0;
+    content: "";
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #ffff;
+    background-color: #000;
+    height: 100%;
+    width: 100%;
+  }
+  &:after {
+    content: "";
+    display: inline-block;
+    transform: rotate(45deg); 
+    height: 12px;
+    width: 5px;
+    border-bottom: 3px solid #fff;
+    border-right: 3px solid #fff;
+    position: absolute;
+    left: 6px;
+    top: 1px;
+  }
+  &:checked {
+    border-color: #000;
+    &::before {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+input[type="radio"] {
+  border-radius: 100%;
+  &::before{
+    content: "";
+    width: 14px;
+    height: 14px;
+    top: 3px;
+    left: 3px;
+    border-radius: 100%;
+  }
+  &::after {
+    display: none;
+  }
+}
+
+input[type="checkbox"][data-toggler] {
+  border-radius: 0px;
+  height: 24px;
+  cursor: pointer;
+  width: 48px;
+  &::before {
+    top: 2px;
+    left: 2px;
+    content: "";
+    opacity: 1;
+    visibility: visible;
+    position: absolute;
+    border-radius: 0px;
+    transition: 150ms;
+    height: calc(100% - 4px);
+    width: 16px;
+    background-color: #000;
+  }
+  &::after {
+    opacity: 0;
+  }
+  &:checked {
+    border-color: #000;
+    background-color: #000;
+    &::before {
+      content: "";
+      top: 2px;
+      left: 26px;
+      background-color: #fff;
+      font-size: 14px;
+      color: #000;
+      transition: 150ms;
+    }
+    &::after {
+      display: initial;
+      left: unset;
+      right: 7px;
+      opacity: 1;
+      transition: 200ms;
+      border-color: #000;
+      top: 5px;
+      width: 3px;
+      height: 7px;
+      border-width: 2px;
+    }
+  }
+}
+
+textarea {
+  height: auto;
+  height: auto;
+  padding: 16px;  
+}
+
+.required, [required] {
+  &::after {
+    content: '*';
+    margin-left: 8px;
+    color: #000;
+  }
+}
+
+.disabled, [disabled], [data-disabled] {
+  opacity: .4;
+  cursor: default;
+  pointer-events: none;
+}
+
+// remove blue backgroun from autocompleted fields
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+}
+
+[data-redmark] {
+  border-color: var(--app-color-error) !important;
+  outline-color: var(--app-color-error);
+
+  &:hover, &:focus-within, input, textarea, select {
+    border-color: var(--app-color-error) !important;
+    outline-color: var(--app-color-error);
+  
+    // &:hover, &:focus, &:active {
+    //   outline-color: var(--app-color-error);
+    //   border-color: var(--app-color-error) !important;
+    // }
+  }
+}
+
+.field {
+  input + p {
+    margin-top: 2px;
+  }
+}

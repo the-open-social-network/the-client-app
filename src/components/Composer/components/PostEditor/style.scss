@@ -1,0 +1,33 @@
+.post-editor {
+  overflow: auto;
+  font-size: 16px;
+  overflow: auto;
+  min-height: 100px;
+  background-color: #fffefe;
+
+  .remirror-editor {
+    color: #222;
+    padding: 16px;
+    outline: none;
+    min-height: 80px;
+    line-height: 20px;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    
+    * {
+      font-size: 16px;
+    }
+
+    a, .remirror-mention-atom, .suggest, em {
+      font-weight: 600;
+      font-style: normal;
+      line-height: inherit;
+      text-decoration: none;
+      color: var(--app-color-accent);
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.auth-box-register-help {
+  .auth-box-register-help-check {
+    svg {
+      display: inline;
+      height: 16px;
+      line-height: 100%;
+      transform: translateY(1px);
+      fill: var(--app-color-error);
+    }
+
+    &[data-ok=true] {
+      svg {
+        fill: var(--app-color-success);
+      }
+    }
+  }
+}

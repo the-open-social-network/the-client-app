@@ -1,0 +1,20 @@
+.server-rules {
+  width: 100%;
+
+  &--error, &--loading {
+    width: 100%;
+    display: flex;
+    padding-top: 40px;
+    justify-content: center;
+  }
+
+  ol {
+    list-style: decimal;
+    padding-left: 20px;
+    margin-bottom: 32px;
+  }
+
+  button {
+    margin-bottom: 16px;
+  }
+}

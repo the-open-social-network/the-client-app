@@ -1,0 +1,30 @@
+.user-profile-links {
+  overflow: auto;
+
+  &__empty {
+    text-align: center;
+  }
+
+  &__info {
+    width: 100%;
+    text-align: center;
+
+    > .avatar {
+      margin: 0 auto;
+      margin-bottom: 8px;
+    }
+
+    > p {
+      margin: 0;
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+  }
+
+  ul {
+    margin: 0;
+    list-style: none;
+    margin-bottom: 8px;
+  }
+}

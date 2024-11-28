@@ -1,0 +1,73 @@
+.information {
+  width: 100%;
+  max-width: 500px;
+
+  &__content {
+    width: 100%;
+    min-width: 280px;
+    text-align: center;
+    display: inline-block;
+
+    h1, hr, p, a {
+      color: var(--color);
+    }  
+
+    h1, hr, p {
+      margin: 0;
+      margin-bottom: 16px;
+      justify-content: center;
+    }
+
+    p:last-of-type {
+      margin-bottom: 32px;
+    }
+
+    > button {
+      text-align: center;
+      margin-bottom: 16px;
+      font-weight: 600;
+      display: block;
+      width: 100%;
+      text-decoration: none;
+    }
+
+    > a {
+      margin: 0;
+      width: 100%;
+      display: block;
+      text-align: center;
+      margin-bottom: 16px;
+      text-decoration: none;
+    }
+    
+    > svg {
+      fill: #333;
+      height: 80px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &--info {
+    svg {
+      fill: var(--app-color-info);
+    }
+  }
+
+  &--success {
+    svg {
+      fill: var(--app-color-success);
+    }
+  }
+
+  &--error {
+    svg {
+      fill: var(--app-color-error);
+    }
+  }
+
+  &--warn {
+    svg {
+      fill: var(--app-color-warn);
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.handle-picker {
+  p {
+    &[data-picker-state] {
+      font-size: 14px;
+    }
+
+    &[data-picker-state=invalid],
+    &[data-picker-state=error] {
+      font-weight: 500;
+      color: var(--app-color-error);
+    }
+
+    &[data-picker-state=valid] {
+      font-weight: 500;
+      color: var(--app-color-success);
+    }
+
+    &[data-picker-state=exists] {
+      font-weight: 500;
+      color: var(--app-color-warn);
+    }
+  }
+}

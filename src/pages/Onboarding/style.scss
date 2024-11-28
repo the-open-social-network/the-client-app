@@ -1,0 +1,13 @@
+.page-onboarding {
+  &__content {
+    padding: 56px 16px;
+    display: block;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+
+    header {
+      margin-bottom: 32px;
+    }
+  }
+}

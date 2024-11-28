@@ -1,0 +1,165 @@
+:root {
+  --h1-font-size: 44px;
+  --h2-font-size: 32px;
+  --h3-font-size: 24px;
+  --h4-font-size: 18px;
+  --h5-font-size: 16px;
+  --h6-font-size: 14px;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6,
+h1,  h2, h3, h4, h5, h6 {
+  color: #222;
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  line-height: 100%;
+  margin-bottom: 24px;
+}
+
+h6, .h6 {
+  font-weight: bold;
+  &:not(.--lower) {
+    text-transform: uppercase;
+  }
+}
+
+@each $h in (h1, h2, h3, h4, h5, h6) {
+  #{$h}, .#{$h} {
+    font-size: var(--#{$h}-font-size);
+    @media screen and (max-width: 1023px) {
+      font-size: calc(#{var(--#{$h}-font-size)} / 1.4);
+    }
+  }
+}	
+
+hr {
+  margin: 24px 0;
+  border-width: 0;
+  border-top: 1px solid #E0E0E0;
+}
+
+p, .is-p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  margin: 0;
+  line-height: 150%;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+a, .is-link {
+  cursor: pointer;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  &:focus {
+    outline: solid 2px #000;
+  }  
+  &:hover {
+    text-decoration: underline;
+  }
+  @media print {	
+    &:not([href^="#"]):not([href^="javascript"])::after{
+      content: " (" attr(href) ") ";
+    }
+  }		
+}
+
+label, .text-label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #000;
+}
+
+blockquote {
+  margin: 0;
+  padding: 16px;
+  font-size: 16px;
+  margin-bottom: 24px;
+  color: #000;
+  font-family: var(--font-family-1);
+  border-left: solid 4px #000;
+  background-color: rgba(180,180,180,.1);
+
+  > *:only-child {
+    margin-bottom: 0;
+  }
+}
+
+mark, .mark {
+  color: inherit;
+  display: inline;
+  font-size: inherit;
+  font-family: inherit;
+  white-space: inherit;
+  padding: 0 6px;
+  text-align: center;
+  border-radius: 4px;
+  background-color: rgba(180,180,180,.2);
+}
+
+kbd {
+  padding: 0px 4px;
+  border-radius: 2px;
+  background-color: rgba(180,180,180,.2);
+}
+
+strong, b {
+  font-weight: 600;
+}
+
+.text-small {
+  font-size: 14px;
+}
+
+.text-large {
+  font-size: 20px;
+}
+
+.text-caption {
+  font-size: 14px;
+}
+
+.text-quotation {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.text-button {
+  color: #000;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.text-semibold {
+  font-weight: 600;
+}
+
+.is-hr {
+  width: 100%;
+  font-size: 16px;
+  position: relative;
+  text-align: center;
+  background-color: #fff;
+  color: #000;
+  &:before,
+  &:after {
+    content: '';
+    top: 50%;
+    width: calc(50% - 30px);
+    position: absolute;
+    transform: translateY(-50%);
+    border-bottom: solid 1px #f1f1f1;
+  }
+  &:after {
+    right: 0;
+  }
+  &:before {
+    left: 0;
+  }
+}

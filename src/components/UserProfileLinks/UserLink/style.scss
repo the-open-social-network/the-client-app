@@ -1,0 +1,16 @@
+.user-profile-links__link {
+  display: flex;
+
+  &:last-of-type {
+    margin: 0;
+  }
+
+  a {
+    width: 100%;
+    text-decoration: none;
+
+    > button {
+     text-transform: none;
+   }
+  }
+}

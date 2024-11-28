@@ -1,0 +1,90 @@
+.composer {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  max-width: 568px;
+  max-height: 100%;
+  height: fit-content;
+  flex-direction: column;
+  background-color: #fffefe;
+  border: solid 1px #f1f1f1;
+
+  header {
+    width: 100%;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 1px #f1f1f1;
+
+    > div {
+      gap: 4px;
+      display: flex;
+      align-items: center;
+    }
+
+    button {
+      padding: 0;
+      height: 24px;
+      min-width: 50px;
+      min-height: unset;
+      max-height: unset;
+  
+      &[data-loading=true] {
+        opacity: 1;
+        border: none;
+        background-color: #fff;
+      }
+    }
+
+    .button-brick, .button--small {
+      width: 24px;
+      min-width: unset;
+    }
+  }
+
+  &__content {
+    flex: 1;
+    overflow: auto;
+    overscroll-behavior: contain;
+  }
+
+  &__editor {
+    flex: 1;
+    overflow: auto;
+    position: relative;
+  }
+
+  footer {
+    width: 100%;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: solid 1px #f1f1f1;
+
+    > div {
+      gap: 16px;
+      display: flex;
+      align-items: center;
+    }
+
+    ul {
+      gap: 12px;
+      margin: 0;
+      height: 100%;
+      display: flex;
+      list-style: none;
+      align-items: center;
+
+      li {
+        margin: 0;
+
+        button {
+          outline-color: #ccc;
+        }
+      }
+    }
+    
+  }
+}

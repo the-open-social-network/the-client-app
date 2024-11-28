@@ -1,0 +1,26 @@
+.dialog {
+  width: 100%;
+  padding: 24px 16px;
+  max-width: 400px;
+  background-color: #fff;
+
+  p {
+    margin: 0;
+    margin-bottom: 8px;
+
+    &:last-of-type {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    width: 100%;
+    gap: 8px;
+
+    button {
+      min-width: 50%;
+      border: none;
+    }
+  }
+}

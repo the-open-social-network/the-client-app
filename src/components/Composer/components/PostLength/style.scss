@@ -1,0 +1,11 @@
+.post-length {
+  gap: 6px;
+  display: flex;
+  align-items: center;
+  p {
+    margin: 0;
+    color: #555;
+    font-size: 14px;
+    font-weight: 500;
+  }
+}

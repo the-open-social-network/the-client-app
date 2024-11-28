@@ -1,0 +1,12 @@
+.pop-over {
+  right: 0;
+  overflow: hidden;
+  position: absolute;
+  bottom: calc(100% + 4px);
+  background-color: #fff;
+  border: solid 1px #444;
+
+  &:not([data-open]), [data-open=false] {
+    display: none;
+  }
+}

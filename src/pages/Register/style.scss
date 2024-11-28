@@ -1,0 +1,27 @@
+.page-register {
+  padding: 60px 0px;
+
+  &__content {
+    display: block;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+
+    h1 {
+      gap: 8px;
+      display: flex;
+      align-items: center;
+      
+      a {
+        display: flex;
+        align-items: center;
+                
+        svg {
+          height: 36px;
+          fill: inherit;
+        }
+      }
+    }
+  }
+}

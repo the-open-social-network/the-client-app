@@ -1,0 +1,9 @@
+.emoji-picker {
+  position: relative;
+
+  &__panel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

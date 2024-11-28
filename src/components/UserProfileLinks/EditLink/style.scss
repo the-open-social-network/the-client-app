@@ -1,0 +1,19 @@
+.user-profile-links__edit {
+  margin-top: 8px;
+
+  .field {
+    > button {
+      margin-top: 4px;
+      font-weight: 500;
+      color: var(--app-color-error);
+    }
+
+    .input-icon {
+      overflow: hidden;
+    }
+
+    > button {
+      font-size: 14px;
+    }
+  }
+}

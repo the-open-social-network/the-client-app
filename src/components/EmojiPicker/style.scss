@@ -1,0 +1,10 @@
+.emoji-picker {
+  z-index: 100;
+  position: relative;
+
+  &__panel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
